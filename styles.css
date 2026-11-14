@@ -1,47 +1,333 @@
-* {
-  margin: 10px;
-}
 
-header {
-  background-color: #588b78;
-  color: white;
-  text-align: center;
-  align-content: center;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  padding-left: 80px;
-}
-.thick-green-border {
-  border-color: rgb(39, 59, 39);
-  border-width: 5px;
-  border-style: solid;
-  border-radius: 90%;
-}
-footer {
-  background-color: #588b78;
-  color: #bdc8ca;
-}
-.centered {
-  text-align: center;
-}
+/* General page styling */
 body {
-  background-color: #f5f0e6;
-  color: #29332f;
-
-  h2 {
-    color: #588b78;
-  }
-  p {
-    color: darkslategray;
-  }
-  ul {
-    color: darkslategray;
-  }
+    margin: 0;
+    background-color: #191C20;
+    color: #F1E4CF;
+    font-family: Georgia, serif;
 }
 
-.intro {
-  max-width: 500px;
-  text-align: center;
-  margin-left: 80px;
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #171319;
+}
+
+/* Website name */
+.logo {
+    color: #C6A779;
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual links */
+.nav-links a {
+    color: #F1E4CF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    color: #032912;
+    background-color: #C6A779;
+    border: 1px solid #C6A779;
+    box-shadow: 0 0 10px rgba(198, 167, 121, 0.3);
+}
+
+/* Hero banner */
+.hero img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+.welcome {
+    text-align: center;
+    padding: 5px 20px 5px;
+    background-color: #191C20;
+}
+
+.welcome h2 {
+    color: #C6A779;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.welcome .tagline {
+    color: #F1E4CF;
+    font-size: 26px;
+    font-style: italic;
+}
+
+.welcome p {
+    max-width: 650px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+/* Explore the Blog section */
+.explore {
+    padding: 5px 40px 30px;
+    text-align: center;
+    background-color: #191C20;
+}
+
+.explore h2 {
+    color: #C6A779;
+    font-size: 36px;
+    margin-bottom: 35px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Individual category cards */
+.category-card {
+    background-color: #501C2B;
+    border: 2px solid #C6A779;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Category images */
+.category-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Category titles */
+.category-card h3 {
+    color: #F1E4CF;
+    font-size: 18px;
+    padding: 15px;
+    margin: 0;
+}
+
+/* Category card hover effect */
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(198, 167, 121, 0.25);
+}
+
+@media (max-width: 900px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Latest from the Blog section */
+.latest-posts {
+    padding: 20px 40px 60px;
+    background-color: #191C20;
+    text-align: center;
+}
+
+.latest-posts h2 {
+    color: #C6A779;
+    font-size: 36px;
+    margin-bottom: 35px;
+}
+
+/* Featured and recent articles layout */
+.posts-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    text-align: left;
+}
+
+/* Two smaller articles */
+.recent-posts {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    height: 500px;
+}
+
+
+/* Blog article cards */
+.featured-post,
+.recent-post {
+    background-color: #501C2B;
+    border: 2px solid #C6A779;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 0;
+}
+
+/* Featured article layout */
+.featured-post {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    height: 500px;
+}
+
+.recent-post {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+}
+
+/* Featured article image */
+.featured-post img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    display: block;
+}
+
+/* Smaller article images */
+.recent-post img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Article text */
+.post-content {
+    padding: 20px;
+}
+
+.featured-post .post-content {
+    padding: 10px 15px;
+}
+
+/* Smaller article text */
+.recent-post .post-content {
+    padding: 8px 12px;
+}
+
+.recent-post .post-content h3 {
+    font-size: 18px;
+    margin: 4px 0;
+}
+
+/* Article categories */
+.post-category {
+    color: #C6A779;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Article titles */
+.post-content h3 {
+    color: #F1E4CF;
+    margin: 10px 0;
+}
+
+/* Read More links */
+.post-content a {
+    color: #C6A779;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.post-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* Latest posts on tablets and phones */
+@media (max-width: 900px) {
+    .posts-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .recent-posts {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .recent-posts {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Blog Page Introduction */
+
+.blog-intro {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.blog-intro h2 {
+    color: #C6A779;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.blog-intro p {
+    color: #F1E4CF;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+/* Blog Article Grid */
+
+.blog-articles {
+    padding: 20px 40px 60px;
+}
+
+.blog-articles h2 {
+    color: #C6A779;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+@media (max-width: 900px) {
+    .article-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
 }

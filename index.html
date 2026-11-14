@@ -1,47 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gilded Page</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Johanna Lawter</title>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <img class= "thick-green-border" src="Selfpicture.jpeg" alt="Johanna smiling at the camera. There is a garden in the background." width="300" height="350">
-      <div class="intro">
-      <h1>Johanna Lawter</h1>
-      <p>
-        Business ~ Technology ~ Creative Problem Solver
-      </p>
-      </div>
+        <nav class="navbar">
+            <h1 class="logo">The Gilded Page</h1>
+
+            <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+        </nav>
     </header>
     <main>
-      <section>
-        <h2>About me</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-          praesentium
-        </p>
-      </section>
-      <section>
-        <h2>Skills</h2>
-        <h3>My strengths include:</h3>
-        <ul>
-          <li>Tenacity</li>
-          <li>Critical thinking</li>
-          <li>Creativity</li>
-          <li>Innovation</li>
-          <li>Proactivity</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Work Experience</h2>
-      </section>
-    </main>
-    <footer class="centered">
-      Connect with me on
-      <a href="http://www.linkedin.com/in/johannalawter" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </footer>
-  </body>
+<section class="hero">
+<img src="images/hero.png" alt="A magical fantasy library">
+</section>
+
+    <section class="welcome">
+    <h2>Your Next Literary Escape Awaits</h2>
+    <p class="tagline">
+        Where every story opens a door to another world.
+    </p>
+    <p>
+        Explore book reviews, reading guides, and
+        literary discussions across fantasy, mystery,
+        and historical fiction.
+    </p>
+</section>
+
+<section class="explore" id="blog">
+    <h2>Explore the Blog</h2>
+
+    <div class="category-grid">
+
+        <a href="#reviews" class="category-card">
+            <img src="images/book-reviews.png"
+                 alt="An open book in a cozy library">
+            <h3>Book Reviews</h3>
+        </a>
+
+        <a href="#guides" class="category-card">
+            <img src="images/reading-guides.png"
+                 alt="An antique compass on a fantasy map">
+            <h3>Reading Guides</h3>
+        </a>
+
+        <a href="#discussions" class="category-card">
+            <img src="images/discussions.png"
+                 alt="Two chairs in a cozy library">
+            <h3>Literary Discussions</h3>
+        </a>
+
+        <a href="#recommendations" class="category-card">
+            <img src="images/recommendations.png"
+                 alt="A stack of magical books">
+            <h3>Recommendations</h3>
+        </a>
+
+    </div>
+</section>
+
+<!-- Latest Blog Posts -->
+<section class="latest-posts">
+    <h2>Latest from the Blog</h2>
+
+    <div class="posts-layout">
+
+        <!-- Featured Article -->
+        <article class="featured-post">
+            <img src="images/book-reviews.png"
+                 alt="Featured blog article">
+
+            <div class="post-content">
+                <span class="post-category">Featured Article</span>
+                <h3>The Ultimate Fantasy Reading Guide</h3>
+                <p>
+                    Discover your next literary adventure
+                    with our guide to fantasy fiction.
+                </p>
+                <a href="#featured">Read More</a>
+            </div>
+        </article>
+
+        <!-- Rotating Articles -->
+        <div class="recent-posts" id="recent-posts">
+
+            <article class="recent-post" id="recent-post-1">
+                <img src="images/reading-guides.png"
+                     alt="Recent blog article">
+
+                <div class="post-content">
+                    <span class="post-category">Book Reviews</span>
+                    <h3>Our Latest Book Review</h3>
+                    <a href="#review">Read More</a>
+                </div>
+            </article>
+
+            <article class="recent-post" id="recent-post-2">
+                <img src="images/discussions.png"
+                     alt="Recent blog article">
+
+                <div class="post-content">
+                    <span class="post-category">Reading Guides</span>
+                    <h3>Where to Start with Fantasy</h3>
+                    <a href="#guide">Read More</a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+</main>
+ <script src="posts.js"></script>
+ <script src="script.js"></script>
+</body>
 </html>
