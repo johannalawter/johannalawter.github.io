@@ -2,6 +2,11 @@
 /* Blog articles */
 const recentPost1 = document.getElementById("recent-post-1");
 const recentPost2 = document.getElementById("recent-post-2");
+const featuredPost = document.querySelector("#featured-post");
+updateArticle(featuredPost, blogPosts[0]);
+featuredPost.addEventListener("click", function() {
+    window.location.href = featuredPost.querySelector("a").href;
+});
 
 function updateArticle(card, post) {
     card.querySelector("h3").textContent = post.title;
@@ -9,6 +14,12 @@ function updateArticle(card, post) {
     card.querySelector(".post-category").textContent = post.category;
     card.querySelector("a").href = post.link;
 }
+recentPost1.addEventListener("click", function() {
+    window.location.href = recentPost1.querySelector("a").href;
+});
+recentPost2.addEventListener("click", function() {
+    window.location.href = recentPost2.querySelector("a").href;
+});
 updateArticle(recentPost1, blogPosts[0]);
 updateArticle(recentPost2, blogPosts[1]);
 let currentPost1 = 0;
